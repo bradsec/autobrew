@@ -158,7 +158,7 @@ brew_packages() {
     for pkg in ${term_list}
         do
             task_start "Checking for package > ${pkg}"
-                if brew list "${pkg}" >/dev/null 2>&1 || command_exists "${pkg}"; then
+                if brew list "${pkg}" >/dev/null 2>&1; then
                     task_done "Package ${pkg} already installed.$(tput el)"
                 else
                     task_fail "\n"
