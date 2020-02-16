@@ -1,11 +1,12 @@
 ## mac-brewski.sh
 
-Purpose:
+Description:
 
-Install MacOS package manager Homebrew (https://brew.sh) if not already installed.
-Use Homebrew to automate install of terminal and GUI packages.
+Shell script to automate the installation of MacOS package manager Homebrew (https://brew.sh) and a custom list of terminal and GUI packages/applications.
 
-Clone, edit to customise packages etc. and run manually. Or use the curl command shown below.
+**Usage**
+
+Clone, edit to the script customise packages etc. and run manually. Or use the curl command shown below.
     
 [ Tested February 2020 MacOS Catalina ]
 
