@@ -151,7 +151,7 @@ install_homebrew() {
 
 brew_packages() {
     # term_list includes packages which run from terminal without GUI
-    term_list="mas git vim htop wget ffmpeg nmap speedtest-cli"
+    term_list="mas git vim htop wget nmap speedtest-cli"
     # cask_list includes packages which require GUI
     cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle"
     term_message cb "\nInstalling non-gui brew packages..."
