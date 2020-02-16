@@ -11,4 +11,4 @@ Clone, edit to the script customise packages etc. and run manually. Or use the c
     
 **Run direct with curl**
 
-`sh -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
