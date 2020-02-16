@@ -114,7 +114,7 @@ check_xcode() {
         task_fail "\n"
         term_message yb "Attempting to install Xcode command line tools..."
         if xcode-select --install  >/dev/null 2>&1; then
-            term_message gb "Xcode command line tools installed.\n"
+            term_message gb "Re-run script after Xcode command line tools have finished installing.\n"
         else
             term_message rb "Xcode command line tools install failed.\n"
         fi
