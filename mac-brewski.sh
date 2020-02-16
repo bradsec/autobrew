@@ -124,7 +124,7 @@ check_xcode() {
 
 install_homebrew() {
     term_message cb "\nInstalling Homebrew..."
-    task_start "Checking for Homebrew..."
+    task_start "Checking for Homebrew...\n"
     if command_exists "brew"; then
         task_done "Homebrew is installed.$(tput el)"
         task_start "Running brew update..."
