@@ -124,7 +124,7 @@ check_xcode() {
 
 install_homebrew() {
     term_message cb "\nInstalling Homebrew..."
-    task_start "Checking for Homebrew...\n"
+    task_start "Checking for Homebrew..."
     if command_exists "brew"; then
         task_done "Homebrew is installed.$(tput el)"
         task_start "Running brew update..."
@@ -139,13 +139,14 @@ install_homebrew() {
         else
             task_fail "Brew upgrade failed.$(tput el)"
         fi
-            else
-                term_message yb "Attempting to install Homebrew..."
-                if /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; then
-                    term_message gb "Homebrew installed."
-                else
-                    term_message rb "Homebrew install failed."
-                fi
+    else
+        task_fail "\n"
+        term_message yb "Attempting to install Homebrew..."
+        if /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; then
+            term_message gb "Homebrew installed."
+        else
+            term_message rb "Homebrew install failed."
+        fi
             fi
 }
 
