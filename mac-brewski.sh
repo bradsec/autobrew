@@ -8,11 +8,11 @@ script_info() {
     cat <<EOF
 
 ██████╗ ██████╗ ███████╗██╗    ██╗███████╗██╗  ██╗██╗
-${YELLOW}██╔══██╗██╔══██╗██╔════╝██║    ██║██╔════╝██║ ██╔╝██║
+██╔══██╗██╔══██╗██╔════╝██║    ██║██╔════╝██║ ██╔╝██║
 ██████╔╝██████╔╝█████╗  ██║ █╗ ██║███████╗█████╔╝ ██║
 ██╔══██╗██╔══██╗██╔══╝  ██║███╗██║╚════██║██╔═██╗ ██║
 ██████╔╝██║  ██║███████╗╚███╔███╔╝███████║██║  ██╗██║
-╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝${RESET}
+╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝
                                                      
 Name:           mac-brewski.sh
 Description:    Automate install of MacOS Homebrew and selected packages
@@ -112,7 +112,7 @@ check_xcode() {
         task_done "Xcode command line tools are installed.$(tput el)"
     else
         task_fail "\n"
-        term_message yb "Attempting to install Xcode command line tools..."
+        term_message mb "Attempting to install Xcode command line tools..."
         if xcode-select --install  >/dev/null 2>&1; then
             term_message gb "Re-run script after Xcode command line tools have finished installing.\n"
         else
@@ -141,7 +141,7 @@ install_homebrew() {
         fi
     else
         task_fail "\n"
-        term_message yb "Attempting to install Homebrew..."
+        term_message mb "Attempting to install Homebrew..."
         if /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; then
             term_message gb "Homebrew installed."
         else
@@ -163,7 +163,7 @@ brew_packages() {
                     task_done "Package ${pkg} already installed.$(tput el)"
                 else
                     task_fail "\n"
-                    term_message yb "Attempting to install ${pkg}..."
+                    term_message mb "Attempting to install ${pkg}..."
                     if brew install "${pkg}"; then
                         term_message gb "Package ${pkg} installed.\n"
                     else
@@ -179,7 +179,7 @@ brew_packages() {
                     task_done "Package ${cask} already installed.$(tput el)"
                 else
                     task_fail "\n"
-                    term_message yb "Attempting to install ${cask}..."
+                    term_message mb "Attempting to install ${cask}..."
                     if brew cask install "${cask}"; then
                         term_message gb "Package ${cask} installed.\n"
                     else
