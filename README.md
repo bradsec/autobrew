@@ -1,4 +1,4 @@
-# mac-brewski.sh
+## mac-brewski.sh
 [ Tested February 2020 MacOS Catalina ]
 
 **Description / Purpose**
@@ -11,7 +11,7 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 
 `xcode-select --install`
 
-# Usage
+## Usage
 
 **Method 1: Quick one-liner install**
 
@@ -35,6 +35,6 @@ brew_packages() {
 
 Run using: `bash mac-brewski.sh`
 
-# Notes
+## Notes
 
 Due to the security settings in MacOS when you run the packages/applications for the first time you may need to allow them in the 'Security & Privacy' settings. Depending on the application you may also need to grant access to the required area under 'Security & Privacy' > 'Privacy' tab.
