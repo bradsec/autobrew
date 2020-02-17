@@ -165,9 +165,9 @@ brew_packages() {
                     task_fail "\n"
                     term_message mb "Attempting to install ${pkg}..."
                     if brew install "${pkg}"; then
-                        term_message gb "Package ${pkg} installed.\n"
+                        task_done "Package ${pkg} installed.\n"
                     else
-                        term_message rb "Package ${pkg} install failed.\n"
+                        task_fail "Package ${pkg} install failed.\n"
                     fi
                 fi
         done
@@ -181,9 +181,9 @@ brew_packages() {
                     task_fail "\n"
                     term_message mb "Attempting to install ${cask}..."
                     if brew cask install "${cask}"; then
-                        term_message gb "Package ${cask} installed.\n"
+                        task_done "Package ${cask} installed.\n"
                     else
-                        term_message rb "Package ${cask} install failed.\n"
+                        task_fail "Package ${cask} install failed.\n"
                     fi
                 fi
         done
