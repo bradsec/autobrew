@@ -19,9 +19,9 @@ brew_packages() {
     cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle"
 ```
 
-Run using:
+Run using: `bash mac-brewski.sh`
 
-`bash mac-brewski.sh`
+Or `chmod +x mac-brewski.sh``./mac-brewski`
 
 Alternatively use the curl command shown below (this will install the default packages/applications listed in script):
 
