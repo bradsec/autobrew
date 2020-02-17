@@ -7,6 +7,7 @@ Shell script to automate the installation of a custom list of MacOS terminal and
 
 **Usage**
 *Method 1: Manual*
+
 Clone, edit to the script customise packages etc. and run manually.
 
 The packages/applications installed by the script are located under located under the 'brew_packages()' function.
@@ -22,6 +23,7 @@ brew_packages() {
 Run using: `bash mac-brewski.sh`
 
 *Method 2: Auto*
+
 Alternatively use the curl command shown below (this will install the default packages/applications listed in script):
 
 `bash -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
