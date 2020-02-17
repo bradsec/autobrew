@@ -5,6 +5,12 @@
 
 Bash shell script to automate the installation of a custom list of MacOS terminal and GUI packages/applications using Homebrew (https://brew.sh) package manager. Ideal for new MacOS installations to save time finding and installing individual packages.
 
+**Requirements**
+
+Homebrew does require Xcode command line tools. Use the command below from a terminal window to install.
+
+`xcode-select --install`
+
 **Usage Method 1: Quick one-liner install**
 
 Use the curl command shown below (this will install the default packages/applications listed in script):
