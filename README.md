@@ -5,14 +5,13 @@
 
 Shell script to automate the installation of a custom list of MacOS terminal and GUI packages/applications using Homebrew (https://brew.sh) package manager. Great for new MacOS installations to save time finding and installing individual packages.
 
-**Usage**
-**Method 1: Quick one-liner install**
+**Usage Method 1: Quick one-liner install**
 
 Use the curl command shown below (this will install the default packages/applications listed in script):
 
 `bash -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
 
-**Method 2: Manually clone and edit **
+**Usage Method 2: Manually clone and edit**
 
 Clone, edit to the script customise packages etc. and run manually.
 
