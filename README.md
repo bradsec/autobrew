@@ -29,4 +29,4 @@ Run using: `bash mac-brewski.sh`
 
 **Notes**
 
-Due to the security in MacOS when you run the packages/applications for the first time you may need to allow them in the 'Security & Privacy' settings. Depending on the application you may need to grant access to the required area under 'Security & Privacy' > 'Privacy' tab.
+Due to the security settings in MacOS when you run the packages/applications for the first time you may need to allow them in the 'Security & Privacy' settings. Depending on the application you may also need to grant access to the required area under 'Security & Privacy' > 'Privacy' tab.
