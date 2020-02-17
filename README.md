@@ -11,13 +11,13 @@ Clone, edit to the script customise packages etc. and run manually.
 
 The packages/applications installed by the script are located under located under the 'brew_packages()' function.
 
-`
+```
 brew_packages() {
     # term_list includes packages which run from terminal without GUI
     term_list="mas git vim htop wget nmap speedtest-cli"
     # cask_list includes packages which require GUI
     cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle"
-`
+```
 
 Run using:
 
