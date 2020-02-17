@@ -13,7 +13,7 @@ Use the curl command shown below (this will install the default packages/applica
 
 **Usage Method 2: Manually clone and edit**
 
-Clone, edit to the script customise packages etc. and run manually.
+Clone, edit the script to customise packages etc. and run manually.
 
 The packages/applications installed by the script are located under located under the 'brew_packages()' function.
 
