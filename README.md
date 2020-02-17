@@ -1,4 +1,4 @@
-## mac-brewski.sh
+### mac-brewski.sh
 [ Tested February 2020 MacOS Catalina ]
 
 **Description / Purpose**
@@ -11,13 +11,15 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 
 `xcode-select --install`
 
-**Usage Method 1: Quick one-liner install**
+### Usage
+
+**Method 1: Quick one-liner install**
 
 Use the curl command shown below (this will install the default packages/applications listed in script):
 
 `bash -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
 
-**Usage Method 2: Manually clone and edit**
+**Method 2: Manually clone and edit**
 
 Clone, edit the script to customise packages etc. and run manually.
 
