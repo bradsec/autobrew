@@ -143,9 +143,10 @@ install_homebrew() {
         task_fail "\n"
         term_message mb "Attempting to install Homebrew..."
         if /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; then
-            term_message gb "Homebrew installed."
+            task_done "Homebrew installed.\n"
         else
-            term_message rb "Homebrew install failed."
+            task_failed "Homebrew install failed.\n"
+            exit 1
         fi
             fi
 }
