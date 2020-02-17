@@ -3,11 +3,15 @@
 
 **Description / Purpose**
 
-Shell script to automate the installation of MacOS package manager Homebrew (https://brew.sh) and a custom list of terminal and GUI packages/applications.
+Shell script to automate the installation of a custom list of MacOS terminal and GUI packages/applications using Homebrew (https://brew.sh) package manager. Great for new MacOS installations to save time finding and installing individual packages.
 
 **Usage**
 
-Clone, edit to the script customise packages etc. and run manually. Or use the curl command shown below.
+Clone, edit to the script customise packages etc. and run manually.
+
+`bash mac-brewski.sh`
+
+Alternatively use the curl command shown below:
     
 **Run direct with curl**
 
