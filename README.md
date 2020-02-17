@@ -11,8 +11,6 @@ Clone, edit to the script customise packages etc. and run manually.
 
 `bash mac-brewski.sh`
 
-Alternatively use the curl command shown below:
-    
-**Run direct with curl**
+Alternatively use the curl command shown below (this will install the default packages/applications listed in script):
 
 `bash -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
