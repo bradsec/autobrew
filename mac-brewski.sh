@@ -18,7 +18,6 @@ Name:           mac-brewski.sh
 Description:    Automate install of MacOS Homebrew and selected packages
 Author:         Mark Bradley
 Tested:         MacOS Catalina
-Modified:       2020-02-17
 Usage:          bash mac-setup.sh
 Requirements:   Command Line Tools (CLT) for Xcode
 
@@ -108,7 +107,7 @@ command_exists() {
 check_xcode() {
     term_message cb "Checking for setup dependencies..."
     task_start "Checking for Xcode command line tools..."
-    if pkgutil --pkg-info=com.apple.pkg.CLTools_Executables >/dev/null 2>&1; then
+    if command -v xcode-select --version >/dev/null 2>&1; then
         task_done "Xcode command line tools are installed.$(tput el)"
     else
         task_fail "\n"
@@ -152,10 +151,28 @@ install_homebrew() {
 }
 
 brew_packages() {
+    # addition taps to enable packages not included in core tap
+    tap_list="homebrew/cask-fonts"
     # term_list includes packages which run from terminal without GUI
     term_list="mas git vim htop wget nmap speedtest-cli"
-    # cask_list includes packages which require GUI
-    cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle"
+    # cask_list includes packages macOS apps, fonts and plugins and other non-open source software
+    cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle font-fira-code"
+    term_message cb "\nAdding additional Homebrew taps..."
+    for tap in ${tap_list}
+        do
+            task_start "Checking for tap > ${tap}"
+                if brew tap | grep "${tap}" >/dev/null 2>&1 || command_exists "${tap}"; then
+                    task_done "Tap ${tap} already added.$(tput el)"
+                else
+                    task_fail "\n"
+                    term_message mb "Attempting to add tap ${tap}..."
+                    if brew tap "${tap}"; then
+                        task_done "Tap ${tap} added.\n"
+                    else
+                        task_fail "Unable to add tap ${tap}.\n"
+                    fi
+                fi
+        done
     term_message cb "\nInstalling non-gui brew packages..."
     for pkg in ${term_list}
         do
