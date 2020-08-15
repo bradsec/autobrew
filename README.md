@@ -1,5 +1,4 @@
 ## mac-brewski.sh
-[ Tested February 2020 MacOS Catalina ]
 
 **Description / Purpose**
 
