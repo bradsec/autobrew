@@ -26,10 +26,15 @@ The packages/applications installed by the script are located under located unde
 
 ```
 brew_packages() {
+    # addition taps to enable packages not included in core tap
+    tap_list="homebrew/cask-fonts"
     # term_list includes packages which run from terminal without GUI
-    term_list="mas git vim htop wget nmap speedtest-cli"
-    # cask_list includes packages which require GUI
-    cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle"
+    term_list="openssh mas git vim htop wget curl nmap speedtest-cli tree tmux rsync
+    iperf3 jq docker"
+    # cask_list includes packages macOS apps, fonts and plugins and other non-open source software
+    cask_list="iterm2 the-unarchiver visual-studio-code sublime-text google-chrome
+    firefox alfred fontbase rectangle font-fira-code vlc"
+    term_message cb "\nAdding additional Homebrew taps..."
 ```
 
 Run using: `bash mac-brewski.sh`
