@@ -154,9 +154,11 @@ brew_packages() {
     # addition taps to enable packages not included in core tap
     tap_list="homebrew/cask-fonts"
     # term_list includes packages which run from terminal without GUI
-    term_list="mas git vim htop wget nmap speedtest-cli"
+    term_list="openssh mas git vim htop wget curl nmap speedtest-cli tree tmux rsync
+    iperf3 jq docker"
     # cask_list includes packages macOS apps, fonts and plugins and other non-open source software
-    cask_list="iterm2 the-unarchiver visual-studio-code google-chrome alfred iina fontbase rectangle font-fira-code"
+    cask_list="iterm2 the-unarchiver visual-studio-code sublime-text google-chrome
+    firefox alfred fontbase rectangle font-fira-code vlc"
     term_message cb "\nAdding additional Homebrew taps..."
     for tap in ${tap_list}
         do
@@ -173,7 +175,7 @@ brew_packages() {
                     fi
                 fi
         done
-    term_message cb "\nInstalling non-gui brew packages..."
+    term_message cb "\nInstalling brew terminal packages..."
     for pkg in ${term_list}
         do
             task_start "Checking for package > ${pkg}"
@@ -189,7 +191,7 @@ brew_packages() {
                     fi
                 fi
         done
-    term_message cb "\nInstalling gui brew cask packages..."
+    term_message cb "\nInstalling brew cask packages..."
     for cask in ${cask_list}
         do
             task_start "Checking for cask package > ${cask}"
