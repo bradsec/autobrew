@@ -18,7 +18,7 @@ Name:           mac-brewski.sh
 Description:    Automate install of MacOS Homebrew and selected packages
 Author:         Mark Bradley
 Tested:         MacOS Catalina
-Usage:          bash mac-setup.sh
+Usage:          bash mac-brewski.sh
 Requirements:   Command Line Tools (CLT) for Xcode
 
 EOF
