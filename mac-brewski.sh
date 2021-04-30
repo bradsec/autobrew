@@ -195,12 +195,12 @@ brew_packages() {
     for cask in ${cask_list}
         do
             task_start "Checking for cask package > ${cask}"
-                if brew cask list "${cask}" >/dev/null 2>&1; then
+                if brew list --cask "${cask}" >/dev/null 2>&1; then
                     task_done "Package ${cask} already installed.$(tput el)"
                 else
                     task_fail "\n"
                     term_message mb "Attempting to install ${cask}..."
-                    if brew cask install "${cask}"; then
+                    if brew install --cask "${cask}"; then
                         task_done "Package ${cask} installed.\n"
                     else
                         task_fail "Package ${cask} install failed.\n"
