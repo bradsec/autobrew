@@ -154,7 +154,7 @@ brew_packages() {
     # addition taps to enable packages not included in core tap
     tap_list="homebrew/cask-fonts"
     # term_list includes packages which run from terminal without GUI
-    term_list="openssh git vim htop wget curl nmap rsync ffmpeg"
+    term_list="openssh git vim htop wget curl nmap"
     # cask_list includes packages macOS apps, fonts and plugins and other non-open source software
     cask_list="the-unarchiver visual-studio-code sublime-text bitwarden google-chrome firefox font-fira-code
     vlc paragon-ntfs adobe-acrobat-reader spotify radio-silence taskexplorer knockknock"
