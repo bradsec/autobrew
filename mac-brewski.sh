@@ -15,9 +15,9 @@ script_info() {
 ╚═════╝ ╚═╝  ╚═╝╚══════╝ ╚══╝╚══╝ ╚══════╝╚═╝  ╚═╝╚═╝
                                                      
 Name:           mac-brewski.sh
-Description:    Automate install of MacOS Homebrew and selected packages
+Description:    Automate install of macOS Homebrew and selected packages
 Author:         Mark Bradley
-Tested:         MacOS Catalina
+Tested:         macOS Big Sur
 Usage:          bash mac-brewski.sh
 Requirements:   Command Line Tools (CLT) for Xcode
 
@@ -154,10 +154,10 @@ brew_packages() {
     # addition taps to enable packages not included in core tap
     tap_list="homebrew/cask-fonts"
     # term_list includes packages which run from terminal without GUI
-    term_list="openssh git vim htop wget curl nmap rsync jq docker"
+    term_list="openssh git vim htop wget curl nmap rsync ffmpeg"
     # cask_list includes packages macOS apps, fonts and plugins and other non-open source software
-    cask_list="iterm2 the-unarchiver keka visual-studio-code sublime-text bitwarden google-chrome
-    firefox alfred fontbase rectangle font-fira-code vlc adobe-acrobat-reader spotify"
+    cask_list="the-unarchiver visual-studio-code sublime-text bitwarden google-chrome firefox font-fira-code
+    vlc paragon-ntfs adobe-acrobat-reader spotify radio-silence taskexplorer knockknock"
     term_message cb "\nAdding additional Homebrew taps..."
     for tap in ${tap_list}
         do
