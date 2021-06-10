@@ -16,7 +16,7 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 
 Use the curl command shown below (this will install the default packages/applications listed in script):
 
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/mtbradley/brewski/master/mac-brewski.sh)"`
+`bash -c "$(curl -fsSL https://raw.githubusercontent.com/mb256/brewski/master/mac-brewski.sh)"`
 
 **Method 2: Manually clone and edit**
 
