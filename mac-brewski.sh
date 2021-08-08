@@ -6,13 +6,7 @@ set -o pipefail
 # Function to output details of script.
 script_info() {
     cat <<EOF
-
-▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓▓▓ ▓▓     ▓▓ ▓▓▓▓▓▓▓ ▓▓   ▓▓ ▓▓ 
-▓▓   ▓▓ ▓▓   ▓▓ ▓▓      ▓▓     ▓▓ ▓▓      ▓▓  ▓▓  ▓▓ 
-▓▓▓▓▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓   ▓▓  ▓  ▓▓ ▓▓▓▓▓▓▓ ▓▓▓▓▓   ▓▓ 
-▓▓   ▓▓ ▓▓   ▓▓ ▓▓      ▓▓ ▓▓▓ ▓▓      ▓▓ ▓▓  ▓▓  ▓▓ 
-▓▓▓▓▓▓  ▓▓   ▓▓ ▓▓▓▓▓▓▓  ▓▓▓ ▓▓▓  ▓▓▓▓▓▓▓ ▓▓   ▓▓ ▓▓ 
-                                                     
+                                                    
 Name:           mac-brewski.sh
 Description:    Automate install of macOS Homebrew and selected packages
 Author:         Mark Bradley
