@@ -1,31 +1,27 @@
 # AutoBrew
 
-**Description / Purpose**
+### Description
 
-AutoBrew is bash shell script to automate the installation of a custom list of MacOS terminal and GUI packages/applications using the Homebrew (https://brew.sh) package manager. Ideal for new MacOS installations to save time finding and installing individual packages.
+AutoBrew is bash shell script to automate the installation of a custom list of macOS terminal and GUI packages/applications using the Homebrew (https://brew.sh) package manager. Ideal for new macOS installations to save time finding and installing individual packages.
 
-**Requirements**
+### Requirements
 
 Homebrew does require Xcode command line tools. Use the command below from a terminal window to install.
 
 `xcode-select --install`
 
-## Usage
+### Usage 
 
-**Method 1: Quick one-liner install**
+**Method 1 (Quick easy setup):** One liner install using curl or wget. Use one of the following command lines:-  
 
-Use the curl command shown below (this will install the default packages/applications listed in script):
+`sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bradsec/autobrew/main/autobrew.sh)"`
+  
+`sudo bash -c "$(wget -O- https://raw.githubusercontent.com/bradsec/autobrew/main/easyvm.sh)"`
+  
+**Method 2 (Manual method):** Clone and run locally.
 
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/bradsec/autobrew/main/autobrew.sh)"`
+`git clone https://github.com/bradsec/autobrew.git && sudo bash autobrew/autobrew.sh`
 
-**Method 2: Manually clone and edit**
+### Note(s):
 
-Clone, edit the script to customise packages etc. and run manually.
-
-The packages/applications installed by the script are located under located under the 'brew_packages()' function.
-
-Run using: `bash autobrew.sh`
-
-## Notes
-
-Due to the security settings in MacOS when you run the packages/applications for the first time you may need to allow them in the 'Security & Privacy' settings. Depending on the application you may also need to grant access to the required area under 'Security & Privacy' > 'Privacy' tab.
+Due to the security settings in macOS when you run some packages/applications for the first time you may need to allow them in the 'Security & Privacy' settings. Depending on the application you may also need to grant access to the required area under 'Security & Privacy' > 'Privacy' tab.
