@@ -18,7 +18,7 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
   
 **Method 2 (Manual method):** Clone and run locally.
 
-`git clone https://github.com/bradsec/autobrew.git && sudo bash autobrew/autobrew.sh`
+`git clone https://github.com/bradsec/autobrew.git && bash autobrew/autobrew.sh`
 
 ### Note(s):
 
