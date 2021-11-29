@@ -179,7 +179,7 @@ brew_packages() {
                     fi
             done
     fi
-    if [[ ! -z "$term_list" ]]; then
+    if [[ ! -z "$cask_list" ]]; then
         term_message cb "\nInstalling brew cask packages..."
         for cask in ${cask_list}
             do
