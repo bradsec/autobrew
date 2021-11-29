@@ -16,7 +16,7 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 
 `sudo bash -c "$(curl -fsSL https://raw.githubusercontent.com/bradsec/autobrew/main/autobrew.sh)"`
   
-`sudo bash -c "$(wget -O- https://raw.githubusercontent.com/bradsec/autobrew/main/easyvm.sh)"`
+`sudo bash -c "$(wget -O- https://raw.githubusercontent.com/bradsec/autobrew/main/autobrew.sh)"`
   
 **Method 2 (Manual method):** Clone and run locally.
 
