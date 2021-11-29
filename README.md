@@ -11,7 +11,7 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 ### Usage 
 
 ***Run the following commands as a NORMAL user.***  
-*(Homebrew does not need to be run as root or a superuser with sudo or su)*  
+The homebrew `brew` command does not need to be run as root or a superuser with `sudo` or `su`. You may be asked for a superuser password for the installation of the Xcode command line tools or during the initial homebrew setup.   
 
 **Method 1 (Quick easy setup):** One liner install using curl or wget. Use one of the following command lines:-  
 
