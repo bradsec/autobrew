@@ -143,67 +143,67 @@ install_homebrew() {
 }
 
 brew_packages() {
-    term_message cb "\nAdding additional Homebrew taps..."
-    for tap in ${tap_list}
-        do
-            task_start "Checking for tap > ${tap}"
-                if brew tap | grep "${tap}" >/dev/null 2>&1 || command_exists "${tap}"; then
-                    task_done "Tap ${tap} already added.$(tput el)"
-                else
-                    task_fail "\n"
-                    term_message mb "Attempting to add tap ${tap}..."
-                    if brew tap "${tap}"; then
-                        task_done "Tap ${tap} added.\n"
+    if [[ ! -z "$tap_list" ]]; then
+        term_message cb "\nAdding additional Homebrew taps..."
+        for tap in ${tap_list}
+            do
+                task_start "Checking for tap > ${tap}"
+                    if brew tap | grep "${tap}" >/dev/null 2>&1 || command_exists "${tap}"; then
+                        task_done "Tap ${tap} already added.$(tput el)"
                     else
-                        task_fail "Unable to add tap ${tap}.\n"
+                        task_fail "\n"
+                        term_message mb "Attempting to add tap ${tap}..."
+                        if brew tap "${tap}"; then
+                            task_done "Tap ${tap} added.\n"
+                        else
+                            task_fail "Unable to add tap ${tap}.\n"
+                        fi
                     fi
-                fi
-        done
-    term_message cb "\nInstalling brew terminal packages..."
-    for pkg in ${term_list}
-        do
-            task_start "Checking for package > ${pkg}"
-                if brew list "${pkg}" >/dev/null 2>&1 || command_exists "${pkg}"; then
-                    task_done "Package ${pkg} already installed.$(tput el)"
-                else
-                    task_fail "\n"
-                    term_message mb "Attempting to install ${pkg}..."
-                    if brew install "${pkg}"; then
-                        task_done "Package ${pkg} installed.\n"
+            done
+    fi
+    if [[ ! -z "$term_list" ]]; then
+        term_message cb "\nInstalling brew terminal packages..."
+        for pkg in ${term_list}
+            do
+                task_start "Checking for package > ${pkg}"
+                    if brew list "${pkg}" >/dev/null 2>&1 || command_exists "${pkg}"; then
+                        task_done "Package ${pkg} already installed.$(tput el)"
                     else
-                        task_fail "Package ${pkg} install failed.\n"
+                        task_fail "\n"
+                        term_message mb "Attempting to install ${pkg}..."
+                        if brew install "${pkg}"; then
+                            task_done "Package ${pkg} installed.\n"
+                        else
+                            task_fail "Package ${pkg} install failed.\n"
+                        fi
                     fi
-                fi
-        done
-    term_message cb "\nInstalling brew cask packages..."
-    for cask in ${cask_list}
-        do
-            task_start "Checking for cask package > ${cask}"
-                if brew list --cask "${cask}" >/dev/null 2>&1; then
-                    task_done "Package ${cask} already installed.$(tput el)"
-                else
-                    task_fail "\n"
-                    term_message mb "Attempting to install ${cask}..."
-                    if brew install --cask "${cask}"; then
-                        task_done "Package ${cask} installed.\n"
+            done
+    fi
+    if [[ ! -z "$term_list" ]]; then
+        term_message cb "\nInstalling brew cask packages..."
+        for cask in ${cask_list}
+            do
+                task_start "Checking for cask package > ${cask}"
+                    if brew list --cask "${cask}" >/dev/null 2>&1; then
+                        task_done "Package ${cask} already installed.$(tput el)"
                     else
-                        task_fail "Package ${cask} install failed.\n"
+                        task_fail "\n"
+                        term_message mb "Attempting to install ${cask}..."
+                        if brew install --cask "${cask}"; then
+                            task_done "Package ${cask} installed.\n"
+                        else
+                            task_fail "Package ${cask} install failed.\n"
+                        fi
                     fi
-                fi
-        done
+            done
+    fi
 }
 
-# Each app/package below needs to be seperated by a space
-### tap_list items are only required to enable packages not included in core tap
-### term_list includes packages which run from terminal without GUI
-### cask_list includes macOS GUI applications, fonts and plugins and other software
-
-tap_list="homebrew/cask-fonts"
-term_list="git vim htop wget curl"
-cask_list="the-unarchiver vlc font-fira-code"
-
 # One function to rule them all.
-main() {
+main() {  
+    tap_list="homebrew/cask-fonts"
+    term_list="git vim htop wget curl"
+    cask_list="the-unarchiver vlc font-fira-code"    
     clear
     term_colors
     script_info
