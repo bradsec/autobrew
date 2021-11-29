@@ -7,11 +7,10 @@ set -o pipefail
 script_info() {
     cat <<EOF
                                                     
-Name:           mac-brewski.sh
+Name:           autobrew/run.sh
 Description:    Automate install of macOS Homebrew and selected packages
 Author:         Mark Bradley
 Tested:         macOS Big Sur
-Usage:          bash mac-brewski.sh
 Requirements:   Command Line Tools (CLT) for Xcode
 
 EOF
