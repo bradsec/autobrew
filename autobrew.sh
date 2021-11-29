@@ -8,9 +8,9 @@ script_info() {
     cat <<EOF
                                                     
 Name:           autobrew.sh
-Description:    Automate install of macOS Homebrew and selected packages
+Description:    Automate the installation of macOS 
+                applications and packages using homebrew
 Author:         Mark Bradley
-Tested:         macOS Big Sur
 Requirements:   Command Line Tools (CLT) for Xcode
 
 EOF
