@@ -1,8 +1,6 @@
 # AutoBrew
 
-### Description
-
-AutoBrew is bash shell script to automate the installation of a custom list of macOS terminal and GUI packages/applications using the Homebrew (https://brew.sh) package manager. Ideal for new macOS installations to save time finding and installing individual packages.
+AutoBrew is bash shell script to automate and batch install a custom list of macOS terminal packages or GUI applications using the Homebrew (https://brew.sh) package manager. Ideal for new macOS installations or macOS VMs to save time installing individual packages or using the Apple App Store.
 
 ### Requirements
 
