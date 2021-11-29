@@ -1,4 +1,4 @@
-## mac-brewski.sh
+## autobrew
 
 **Description / Purpose**
 
