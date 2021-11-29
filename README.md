@@ -13,15 +13,16 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 ***Run the following commands as a NORMAL user.***  
 The homebrew `brew` command does not need to be run as root or a superuser with `sudo` or `su`. You may be asked for a superuser password for the installation of the Xcode command line tools or during the initial homebrew setup.   
 
-**Method 1 (Quick easy setup):** One liner install using curl or wget. Use one of the following command lines:-  
+1. Clone the respository `git clone https://github.com/bradsec/autobrew.git`
 
-`bash -c "$(curl -fsSL https://raw.githubusercontent.com/bradsec/autobrew/main/autobrew.sh)"`
-  
-`bash -c "$(wget -O- https://raw.githubusercontent.com/bradsec/autobrew/main/autobrew.sh)"`
-  
-**Method 2 (Manual method):** Clone and run locally.
+2. Edit `autobrew.sh` and modify the `tap_list`, `term_list` and `cask_list` variables under the `main()` function with the applications you want to install. Comment out the tap if not required or leave blank.
 
-`git clone https://github.com/bradsec/autobrew.git && bash autobrew/autobrew.sh`
+```
+    tap_list="homebrew/cask-fonts"
+    term_list="htop wget curl"
+    cask_list="the-unarchiver vlc font-fira-code"
+```
+3. Run the script with `bash autobrew.sh` or `chmod +x autobrew.sh` followed by `./autobrew.sh`.
 
 ### Note(s):
 
