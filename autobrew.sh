@@ -7,7 +7,7 @@ set -o pipefail
 script_info() {
     cat <<EOF
                                                     
-Name:           autobrew/run.sh
+Name:           autobrew.sh
 Description:    Automate install of macOS Homebrew and selected packages
 Author:         Mark Bradley
 Tested:         macOS Big Sur
