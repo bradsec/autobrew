@@ -143,13 +143,6 @@ install_homebrew() {
 }
 
 brew_packages() {
-    # addition taps to enable packages not included in core tap
-    tap_list="homebrew/cask-fonts"
-    # term_list includes packages which run from terminal without GUI
-    term_list="openssh git vim htop wget curl nmap"
-    # cask_list includes packages macOS apps, fonts and plugins and other non-open source software
-    cask_list="the-unarchiver visual-studio-code sublime-text bitwarden google-chrome firefox font-fira-code
-    vlc paragon-ntfs adobe-acrobat-reader spotify radio-silence taskexplorer knockknock"
     term_message cb "\nAdding additional Homebrew taps..."
     for tap in ${tap_list}
         do
@@ -199,6 +192,15 @@ brew_packages() {
                 fi
         done
 }
+
+# Each app/package below needs to be seperated by a space
+### tap_list items are only required to enable packages not included in core tap
+### term_list includes packages which run from terminal without GUI
+### cask_list includes macOS GUI applications, fonts and plugins and other software
+
+tap_list="homebrew/cask-fonts"
+term_list="git vim htop wget curl"
+cask_list="the-unarchiver vlc font-fira-code"
 
 # One function to rule them all.
 main() {
