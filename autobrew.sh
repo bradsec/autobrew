@@ -196,6 +196,15 @@ brew_packages() {
     fi
 }
 
+brew_cleanup() {
+    task_start "Running brew cleanup..."
+    if brew cleanup >/dev/null 2>&1; then
+        task_done "Brew cleanup completed.$(tput el)"
+    else
+        task_fail "Brew cleanup failed.$(tput el)"
+    fi
+}
+
 # One function to rule them all.
 main() {
     # Customise the following list variables (tap_list, term_list and cask_list) 
@@ -211,6 +220,7 @@ main() {
     check_xcode
     install_homebrew
     brew_packages
+    brew_cleanup
     term_message gb "\nScript completed."
 }
 
