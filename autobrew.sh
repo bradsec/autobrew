@@ -201,8 +201,8 @@ main() {
     # Customise the following list variables (tap_list, term_list and cask_list) 
     # Leave list blank or comment out the list if not required.
     tap_list="homebrew/cask-fonts"
-    term_list="htop wget curl"
-    cask_list="the-unarchiver vlc font-fira-code"
+    term_list="git htop wget curl tmux"
+    cask_list="the-unarchiver vlc font-fira-code visual-studio-code"
     clear
     term_colors
     script_info
