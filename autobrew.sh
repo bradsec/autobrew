@@ -99,7 +99,7 @@ command_exists() {
 check_xcode() {
     term_message cb "Checking for setup dependencies..."
     task_start "Checking for Xcode command line tools..."
-    if [[ ! `xcode-select -p | grep "error"` ]] >/dev/null 2>&1; then
+    if xcode-select -p >/dev/null 2>&1; then
         task_done "Xcode command line tools are installed.$(tput el)"
     else
         task_fail "\n"
