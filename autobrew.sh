@@ -202,7 +202,8 @@ main() {
     # Leave list blank or comment out the list if not required.
     tap_list="homebrew/cask-fonts"
     term_list="git htop wget curl tmux"
-    cask_list="the-unarchiver vlc font-fira-code visual-studio-code"
+    cask_list="the-unarchiver vlc visual-studio-code google-chrome \
+    firefox adobe-acrobat-reader malwarebytes font-fira-code"
     clear
     term_colors
     script_info
