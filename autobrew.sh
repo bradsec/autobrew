@@ -136,7 +136,7 @@ install_homebrew() {
         if /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"; then
             task_done "Homebrew installed.\n"
         else
-            task_failed "Homebrew install failed.\n"
+            task_fail "Homebrew install failed.\n"
             exit 1
         fi
     fi
