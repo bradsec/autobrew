@@ -10,16 +10,13 @@ Homebrew does require Xcode command line tools. Use the command below from a ter
 
 ### Usage 
 
-1. Clone the respository `git clone https://github.com/bradsec/autobrew.git`
+#### To customise your own list of applications use the following method -
 
-2. Edit `autobrew.sh` and modify the `tap_list`, `term_list` and `cask_list` variables under the `main()` function with the applications you want to install. Comment out any lists if they not required or leave blank.
+1. Download and extract the respository
 
-```
-    tap_list="homebrew/cask-fonts"
-    term_list="htop wget curl"
-    cask_list="the-unarchiver vlc font-fira-code"
-```
-3. Run the script with `bash autobrew.sh` or `chmod +x autobrew.sh` followed by `./autobrew.sh`.
+2. Edit `autobrew.sh` and modify the `tap_list`, `term_list` and `cask_list` variables under the `main()` function with the applications you want to install. Comment out any lists if they not required or leave blank. The `tap_list` may not be required unless you need applications or packages which are not in the core Homebrew tap.
+
+3. Run the script with `bash autobrew.sh` or `chmod +x autobrew.sh` followed by `./autobrew.sh`. *The script can be run as a normal user not as root or with sudo, however you may be prompted for a password to install Xcode command line tools if they are not already installed.*
 
 ### Note(s):
 
